@@ -10,7 +10,7 @@ int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     int n, x; cin >> n >> x;
-    int coin[n];
+    int coin[n + 1];
     for(int i = 1; i <= n; i++){
         cin >> coin[i];
     }
