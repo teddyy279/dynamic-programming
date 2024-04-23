@@ -4,8 +4,6 @@ using namespace std;
 
 int mod  = 1e9 + 7;
 
-int F[101][1000001];
-
 int main(){
     ios::sync_with_stdio(false);
     int n, V;
@@ -24,7 +22,6 @@ int main(){
             F[i][j] = max(F[i - 1][j - w[i]] + c[i], F[i - 1][j]);
             }
             else F[i][j] = F[i - 1][j];
-            F[i][j] %= mod;
         }
     }
     cout << F[n][V];
