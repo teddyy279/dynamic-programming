@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int F[505][505];
+long long F[505][505];
 
 int main(){
     ios::sync_with_stdio(false);

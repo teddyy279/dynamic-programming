@@ -15,13 +15,20 @@ int main(){
         }
     }
     for(int i = 1; i <= n; i++){
-        for(int j = 1; j <= n; j++){
-            F[i][j] = max({F[i - 1][j - 1], F[i - 1][j], F[i - 1][j + 1]}) + a[i][j];
+        F[0][i] = -1e18;  
+        F[n + 1][i] = -1e18;
+    }
+    for(int i = 1; i <= n; i++){
+        F[i][1] = a[i][1];
+    }
+    for(int i = 2; i <= n; i++){
+        for(int j = 1; j <= n ; j++){
+            F[j][i] = max({F[j - 1][i - 1], F[j][i - 1], F[j + 1][j - 1]}) + a[j][i];
         }
     }
-    long long res = 0;
+    long long res = -1e18;
     for(int i = 1; i <= n; i++){
-        res = max(res, F[n][i]);
+        res = max(res, F[i][n]);
     }
     cout << res;
 }
