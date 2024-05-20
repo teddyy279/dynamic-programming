@@ -11,7 +11,7 @@ int main(){
 	int F[n + 1][n + 1];
 	memset(F, false, sizeof(F));
 	for(int i = 1; i <= n; i++){
-		F[i][i] = true;
+		F[i][i] = true; // nó đến chính nó thì chả true ví dụ 1234 F[1][1] là số 2 mà 1 số đứng riêng lẻ thì nó là đối xứng...
 	}
 	int ans = 1;
 	for(int len = 2; len <= n; len++){
