@@ -16,7 +16,7 @@ int main(){
     mp[0] = 1; // lẻ trừ chẵn = 0 luôn đúng nên tính luôn nó là 1 mảng đối xứng
     int cnt = 0;
     for(int i = 1; i <= n; i++){
-        if(a[i] % 2 == 0) t++; // hoặc F[i] = F[i - 1] + 1 (lẻ)
+        if(a[i] % 2 == 1) t++; // hoặc F[i] = F[i - 1] + 1 (lẻ)
         else t--; // hoặc F[i] = F[i - 1] + 1(chẵn)
         F[i] = t;  // làm c2 thì bỏ dòng này
         cnt += mp[F[i]];
