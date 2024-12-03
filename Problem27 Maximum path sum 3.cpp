@@ -23,7 +23,7 @@ int main(){
     }
     for(int i = 2; i <= n; i++){
         for(int j = 1; j <= n ; j++){
-            F[j][i] = max({F[j - 1][i - 1], F[j][i - 1], F[j + 1][j - 1]}) + a[j][i];
+            F[j][i] = max({F[j - 1][i - 1], F[j][i - 1], F[j + 1][i - 1]}) + a[j][i];
         }
     }
     long long res = -1e18;
